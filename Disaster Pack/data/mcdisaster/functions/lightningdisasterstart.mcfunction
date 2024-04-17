@@ -1,0 +1,2 @@
+scoreboard players set gamemaster bLightning 1
+function mcdisaster:lightningdisaster
