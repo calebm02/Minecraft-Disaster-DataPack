@@ -10,11 +10,6 @@ scoreboard players set gamemaster bSlime 0
 scoreboard objectives add bLavaTsunami dummy 
 scoreboard players set gamemaster bLavaTsunami 0
 
-scoreboard objectives add DisasterProg dummy 
-scoreboard players set gamemaster DisasterProg 0
-
 #add global gametimer
 scoreboard objectives add GameTime dummy 
 scoreboard players set gamemaster GameTime 0
-
-schedule clear mcdisaster:iterateprogression

@@ -8,9 +8,9 @@ execute align xyz as @e[tag=lightningstand] at @s unless block ~ ~-1 ~ minecraft
 execute align xyz as @e[tag=lightningstand] at @s unless block ~ ~-1 ~ minecraft:air run kill @s
 
 #this is for scheduling appropriately. disaster prog iterates every 20 seconds
-execute if score gamemaster DisasterProg matches 0 run function mcdisaster:iterateprogression
-execute if score gamemaster DisasterProg matches 1 run schedule function mcdisaster:lightningdisaster 10s append
-execute if score gamemaster DisasterProg matches 2..3 run schedule function mcdisaster:lightningdisaster 5s append
-execute if score gamemaster DisasterProg matches 4..5 run schedule function mcdisaster:lightningdisaster 2.5s append
-execute if score gamemaster DisasterProg matches 6..8 run schedule function mcdisaster:lightningdisaster 1s append
-execute if score gamemaster DisasterProg matches 9 run function mcdisaster:cleanup
+execute if score gamemaster DisasterProg matches 0..20 run schedule function mcdisaster:lightningdisaster 10s append
+execute if score gamemaster DisasterProg matches 20..60 run schedule function mcdisaster:lightningdisaster 5s append
+execute if score gamemaster DisasterProg matches 60..80 run schedule function mcdisaster:lightningdisaster 2.5s append
+execute if score gamemaster DisasterProg matches 80..100 run schedule function mcdisaster:lightningdisaster 2.5s append
+execute if score gamemaster DisasterProg matches 100..120 run schedule function mcdisaster:lightningdisaster 1s append
+execute if score gamemaster DisasterProg matches 120.. run function mcdisaster:gameend
