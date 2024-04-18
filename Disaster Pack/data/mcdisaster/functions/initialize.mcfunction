@@ -13,3 +13,9 @@ scoreboard players set gamemaster bLavaTsunami 0
 #add global gametimer
 scoreboard objectives add GameTime dummy 
 scoreboard players set gamemaster GameTime 0
+
+#add spawnLocations for scaling objectives
+scoreboard objectives add curSpawnLocations dummy 
+scoreboard players set gamemaster curSpawnLocations 0
+scoreboard objectives add maxSpawnLocations dummy 
+scoreboard players set gamemaster maxSpawnLocations 0

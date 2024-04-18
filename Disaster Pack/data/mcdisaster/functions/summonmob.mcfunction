@@ -1,1 +1,0 @@
-$summon $(entity) $(x) $(y) $(z) $(nbt)
